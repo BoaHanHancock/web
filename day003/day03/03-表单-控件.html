@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>
+  <meta charset="utf-8">
+ </head>
+
+ <body>
+ <!--1、创建一个表单  -->
+ <!-- 2、创建一个 用户名称 的文本框 一级用户密码 的密码框 -->
+ <!--  -->
+  <form method="post" enctype="multipart/form-data">
+		<p>
+			用户名：<input type="text" 
+			name="txtUsername" value="请输入用户名称"
+			maxlength="8">
+		</p>
+		<p>
+				密码 ：<input type=="password" name="txtUserpwd">
+		</p>
+		<!-- 单选按钮 -->
+		<p>
+			用户性别：<input name="rdoGender" type="radio" value="M">男
+								<input name="rdoGender" type="radio" value="F">女
+		</p>
+		<!-- 复选框 -->
+		<p>
+			用户爱好：
+				<input name="chkHobby" type="checkbox" value="eat">吃
+				<input name="chkHobby" type="checkbox" value="drink">喝
+				<input name="chkHobby" type="checkbox" value="play">玩
+				<input name="chkHobby" type="checkbox" value="happy">乐
+		</p>
+		<!-- 隐藏域 -->
+		<p>
+			<input type="hidden"
+			name="txtUserID" value="1102">
+		</p>
+		<!-- 文件选择框 -->
+		<p>
+			头像：	
+			<input type="file">
+		</p>
+		<!-- 按钮 -->
+		<p>
+			<input type="text">
+			<input type="button" value="验证码">
+		</p>
+		<p>
+			<input type="submit">
+			<input type="reset">
+			<input type="button" value="验证码">
+
+		</p>
+	</form>
+ </body>
+</html>

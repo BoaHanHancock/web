@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>
+  <meta charset="utf-8">
+ </head>
+
+ <body>
+  <!--1、创建 表格 table -->
+	<!--2、创建 表行 tr -->
+	<!--3、创建 表列 td -->
+	<table cellpadding="5" cellspacing="1"
+	  border="1" align="center">
+		<!-- 定义表格标题-->
+		<caption>表格标题</caption>
+	<!-- 第一行 -->
+		<tr align="center">
+			<td colspan="2">张无忌</td>
+		
+			<td>殷素素</td>
+			<td>赵敏</td>
+		</tr>
+<!-- 第二行 -->
+		<tr align="right" valign="bottom">
+			<td rowspan="2">张无忌</td>
+			<td>张三丰</td>
+			<td>殷素素</td>
+			<td>赵敏</td>
+		</tr>
+<!-- 第三行 -->
+		<tr align="left" valign="top">
+			<!--<td>张无忌</td> -->
+			<td>张三丰</td>
+			<td colspan="2">赵敏</td>
+		</tr>
+		
+	</table>
+
+	<!-- 行内inline 宽度高度自适应 -->
+	<span align="center">world</span>
+ </body>
+</html>

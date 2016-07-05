@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>
+  <meta charset="utf-8">
+ </head>
+
+ <body>
+  <form>
+	<!--选项框  -->
+	<p>
+		地址:
+		<select name="selAddr" size="3" >
+		<option value="BJ">北京</option>
+		<option value="SH">上海</option>
+		<option value="CD">成都</option>
+		<option value="CQ">重庆</option>
+		</select>
+	</p>
+	<!-- 多行文本域 -->
+	<p>
+		自我介绍：
+<textarea	name="txtInto" cols="20" rows="3" readonly>
+1、短时
+2、快速
+.....
+</textarea>
+	</p>
+	<!-- label  for属性 表示 与该元素相关的表单控件的“ID值”-->
+	<p>
+		<fieldset>
+		<input id="rdoMale" name="rdoGender" type="radio" value="M">
+		<label for="rdoMale">男</label>
+		<input name="rdoGender" type="radio" value="F">女
+		</fieldset>
+	</p>
+	</form>
+ </body>
+</html>
