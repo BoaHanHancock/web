@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<header>
+		<title>Difference between block and inline</title>
+		<meta charset="utf-8">
+		<!--TODO-->
+		<link rel="stylesheet" type="text/css" href="stylesheet/register.css"/>
+		<style text="text/css">
+			tr td{
+				width: 200px;
+				text-align: center;
+			}
+			#content p{
+				padding-left: 40px;
+			}
+		</style>
+	</header>
+	
+	<body>
+	
+		<!--页签-->
+		<div>
+			<h1 align="center">Difference between block and inline</h1>
+			<h3 align="right" style="padding-right: 10%">Welcome to boahanhancock</h3>
+			<hr size="3" width="80%" align="center" color="gray" title="Difference between block and inline"/>
+			</br>
+		</div>
+		
+		<!--内容-->
+		<div style="padding-left: 10%;">
+			<div id="content">
+				<h3>任何不是块级元素的可见元素都是内联元素。</br><span style="padding-left: 350px">--CSS权威指南</span></h3>
+				<h4>视觉区别：</h4>
+				<p>块级元素（Block Element）：独占一行，默认情况自动填满父元素宽度，块级元素间垂直排列
+					</br>内联元素（Inline Element）：内联元素会排列在同一行里，水平排列，若内联元素超过行宽，则换行
+				</p>
+				<h4>包含关系：</h4>
+				<p>块级元素可以包含内联元素和块级元素
+					</br>内联元素可以包含内联元素，但不能包含块级元素
+				</p>
+				<h4>width、height、padding、margin属性对两种元素的影响</h4>
+				<p>内联元素设置width、height属性，不会产生效果；设置padding、margin属性时，上下无效
+				</br>块级元素设置四中属性均会生效</p>
+				<h4>相互转换</h4>
+				<p style="text-indent: 2em">我们知道，按钮是内联元素，但为何我们却可以设置它的宽度？其实，块级元素和内联元素是
+											</br>可以转换的，display设置成对应的属性值，元素就会变成对应类型的元素，如下表：
+				<table border="1px" style="border: 1px solid red">
+					<tr><th>元素</th><th>display属性值</th>
+					<tr><td>块级元素</td><td>block</td>
+					<tr><td>内联元素</td><td>inline</td>
+				</table>
+				
+				</p>
+			</div>
+		</div>
+		
+		<!--页脚-->
+		<div id="footer" style="padding-left: 10%">
+			<h3 style="color: blue">参考文档：</h3>
+			<ol>
+				<li><a href="http://blog.csdn.net/sykent/article/details/7738408">行内元素与块级元素比较全面的区别和转换</a></li>
+				<li><a href="http://www.cnblogs.com/lhl98/p/3432794.html">块级元素和行内元素的区别</a></li>
+				<li><a href="http://blog.sina.com.cn/s/blog_70207ec20102uyuy.html">HTML中行内元素与块级元素有哪些及区别</a></li>
+			</ol>
+		</div>
+		
+	</body>
+	
+</html>
