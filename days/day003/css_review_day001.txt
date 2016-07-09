@@ -1,0 +1,112 @@
+1、css层叠样式表 控制页 面元素样式  
+2、css样式表使用方式：
+	内联方式 <p style=""></p>
+	属性：
+	 color、background-color、font-size
+	内部样式：
+	        <head>
+		  <style>
+			样式规则
+		  </style>
+	外部样式：在网页中引入样式表文件
+	    <head>
+		     <link rel="stylesheet" href="css文件url">
+		    </head>
+3、选择器
+	通用选择器：
+		*{ }
+	元素选择器：div{ }
+	类选择器：.{ }	   多类选择：允许让一个元素应用多个类选择器
+	id 选择器：#idValue{ }
+	
+	群组选择器：	   
+	 div,p,.text,#top,div.important{
+		color:green;
+		}
+	后代选择器:选择器1 选择器2{  }
+	子代选择器: 选择器1>选择器2{  }
+
+	伪类选择器:
+         1、作用
+	    用于 匹配元素不同状态时的样式
+	 2、语法
+	    :伪类名称{}
+	    选择器:伪类选择器{}
+	 3、分类
+	    1、链接伪类
+	       1、:link
+	          匹配 尚未 访问的超链接的状态
+	       2、:visited
+	          匹配 访问过 的超链接的状态
+	    2、动态伪类
+	       1、:hover
+	          匹配 鼠标悬停 在元素上的状态
+	       2、:active
+	          匹配元素 被激活时 的状态
+	       3、:focus
+	          匹配元素 获取焦点 时的状态
+		  多数用在 <input type="text" /><input type="password">上
+
+	选择器优先级
+      权值：标识当前选择器的重要程度。权值越大优先级越高。 
+      元素选择器        1
+      类选择器          10
+      伪类选择器        10
+      ID选择器          100
+      内联样式          1000
+      选择器的权值 加到一起，大的优先
+      权值相同，以后定义为主
+
+4、css 尺寸 边框
+	溢出
+         1、产生溢出
+	    当元素大小不足以显示下所有的内容时，那么内容就会溢出。
+	 2、溢出处理属性
+	    属性：overflow
+	    取值：
+	      1、visibile
+	         默认值，显示
+	      2、hidden
+	         溢出隐藏
+	      3、scroll
+	         元素内部显示滚动条
+		 溢出时可用 
+	      4、auto
+	         溢出时显示滚动条
+		 没有溢出，则无滚动条
+
+	边框： border:width style color;
+	边框倒角(重点)
+         1、倒角
+	    将元素直角倒成圆角
+	 2、属性
+	    border-radius
+	    取值：
+	      1、具体数值
+	      2、百分比
+	         设置 圆形 时使用
+	 3、单角设置
+	    border-top-left-radius:左上角
+	    ...
+      3、边框阴影
+         1、属性
+	    box-shadow
+	 2、取值
+	    由多个值组成的值列表
+	    box-shadow:h-shadow v-shadow blur spread color inset;
+	    h-shadow:必须，阴影水平偏移位置, 值为正，向右偏，值为负，向左偏
+	    v-shadow:必须，阴影垂直偏移位置，值为正，向下偏，值为负，向上偏
+	    blur : 可选，模糊距离
+	    spread :可选， 阴影尺寸
+	    color:可选，颜色
+	    inset :可选，将默认外阴影改为内阴影
+      4、轮廓
+         属性：outline
+	 取值：width style color
+
+	 outline-width:
+	 outline-style:
+	 outline-color:
+	
+
+		
