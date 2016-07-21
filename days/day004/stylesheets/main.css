@@ -1,0 +1,148 @@
+header{
+    width: 100%;
+    height: 270px;
+    margin: 0px;
+    /* TEST */
+    /*background-color: yellow;*/
+}
+
+section{
+    width: 100%;
+    height: 400px;
+    /*background-color: coral;*/
+}
+
+section #menu{
+    float: left;
+    clear: both;
+    width: 250px;
+    height: 400px;
+    background-color: antiquewhite;
+}
+
+section #content{
+    float: left;
+    width: 800px;
+    height: 400px;
+    /*background-color: green;*/
+}
+
+section #content #leftContent{
+    float: left;
+    width: 200px;
+    height: 400px;
+    /*background-color: yellow;*/
+}
+
+section #content #middleContent{
+    float: left;
+    width: 400px;
+    height: 400px;
+    /*background-color: aqua;*/
+}
+
+section#content #rightContent{
+    float: left;
+    width: 200px;
+    height: 400px;
+    /*background-color: yellow;*/
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+    /*background-color: black;*/
+}
+
+footer p{
+    margin: 0px;
+}
+
+
+
+
+header ol{
+    margin: 0px;
+    padding: 0px;
+}
+
+header ol li{
+    list-style-type: none;
+    float: left;
+    width: 210px;
+    height: 250px;
+    padding: 2px;
+    margin: 0px 5px;
+    border: 2px solid darkslategray;
+}
+
+header ol li a{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 4px;
+    text-align: center;
+    background-color: darkgoldenrod;
+}
+
+header ol li img{
+    width: 200px;
+    height: 200px;
+    border: 2px solid brown;
+}
+
+header ol li p{
+    width: 200px;
+    margin: 10px 4px 0px;
+    text-align: center;
+    border: 1px dotted red;
+    background-color: aqua;
+}
+
+/* Show */
+#middleContent img{
+    width: 400px;
+    height: 400px;
+}
+
+#menu ul{
+    margin: 0px;
+    padding: 2px;
+}
+
+#menu li{
+    list-style-type: none;
+    margin-left: 5px;
+}
+
+#menu tr{
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid red;
+}
+
+#menu td{
+    border: 2px solid yellow;
+    width: 120px;
+}
+
+#second_level_menu{
+}
+
+
+
+
+
+
+#qr_code{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 10px;
+    background-color: navajowhite;
+}
+
+#body_wrapper{
+    height: 100%;
+}

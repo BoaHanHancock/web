@@ -1,0 +1,39 @@
+header{
+    width: 100%;
+    height: 100px;
+    /* TEST */
+    background-color: yellow;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    background-color: red;
+}
+
+#navigate li{
+    list-style-type: none;
+    float: left;
+}
+
+#navigate li a{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0px 20px;
+    text-align: center;
+    background-color: darkgoldenrod;
+}
+
+#qr_code{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 10px;
+    background-color: navajowhite;
+}
+
+#body_wrapper{
+    height: 100%;
+}

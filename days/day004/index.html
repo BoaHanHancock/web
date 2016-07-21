@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+    <!--head-->
+    <head>
+        <title>Stone Life</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="stylesheets/main.css"/>
+        <script>
+            function changeShowPic(name) {
+//                document.getElementById("middleContent").getElementsByTagName("img").item(0).
+            }
+            function showSecondMenu(type){
+                var liStr = "";
+                var arr0 = ["子鼠","丑牛","寅虎","卯兔","辰龙","巳蛇","午马","未羊","申猴","酉鸡","戌狗","亥猪"];
+                var arr1 = ["杨柳观音","杨柳观音","杨柳观音","杨柳观音","杨柳观音","杨柳观音","杨柳观音","杨柳观音"]    ;
+                var arr2 = ["如来","应供","正偏执","明行足","善逝世间解","无上士","调御丈夫","天人师","佛","世尊"];
+                var tmp = arr0;
+                if(type == 0)
+                    tmp = arr0;
+                else if(type == 1)
+                    tmp = arr1;
+                else if(type == 2)
+                    tmp = arr2;
+
+                for(var i = 0; i < tmp.length; i++){
+                    liStr = liStr + "<li><input type=\"button\" onclick=\"alert(" + "\'" + tmp[i] + "\'"
+                            + ")\" value=\"" + "\'" + tmp[i] + "\'" + "\"/></li>"
+                }
+                document.getElementById("second_level_menu").innerHTML = liStr;
+            }
+        </script>
+    </head>
+
+    <!--body-->
+    <body>
+
+        <!--header-->
+        <header>
+            <ol id="navigate">
+                <li>
+                    <a href="#footer"><img src="images/chaoshengbodiaojian.jpg" alt="diaojian"></a>
+                    <p>超声波雕件</p>
+                </li>
+                <li>
+                    <a href="#footer"><img src="images/shouzhuo.jpg" alt="diaojian"></a>
+                    <p>手镯、手链</p>
+                </li>
+                <li>
+                    <a href="#footer"><img src="images/erzhui.jpg" alt="diaojian"></a>
+                    <p>耳坠</p>
+                </li>
+                <li>
+                    <a href="#footer"><img src="images/xianglian.jpg" alt="diaojian"></a>
+                    <p>项链</p>
+                </li>
+                <li>
+                    <a href="#footer"><img src="images/qrcode.png" alt="diaojian"></a>
+                    <p>扫描二维码获取折扣</p>
+                </li>
+            </ol>
+            <!--QR Code-->
+        </header>
+
+        <!--section-->
+        <section>
+
+            <!--Menu-->
+            <div id="menu">
+                <table>
+                    <tr>
+                        <td>
+                            <ul id="first_level_menu">
+                                <li><input type="button" onclick="showSecondMenu(0)" value="十二生肖"/></li>
+                                <li><input type="button" onclick="showSecondMenu(1)" value="观音"/></li>
+                                <li><input type="button" onclick="showSecondMenu(2)" value="佛"/></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul id="second_level_menu"></ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--Content-->
+            <div id="content">
+                <div id="leftContent">
+
+                </div>
+                <div id="middleContent">
+                    <img src="images/img.jpg">
+                </div>
+                <div id="rightContent">
+
+                </div>
+            </div>
+        </section>
+
+        <!--footer-->
+        <footer>
+            <p align="center">Welcome to boahanhancock</p>
+        </footer>
+
+    </body>
+</html>
