@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html>
 
+
+
     <!--head-->
     <head>
         <title>Stone Life</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="stylesheets/main.css"/>
+        <script language="javascript" src="prototype.js"></script>
         <script>
-            function changeShowPic(name) {
-//                document.getElementById("middleContent").getElementsByTagName("img").item(0).
+            function changeShowPic(type, index) {
+                var prefix = ["chaoshengbodiaojian", "chaoshen" +
+                "gbodiaojian"];
+                alert("type:" + type + ",index:" + index + "prefix:" + prefix[type]);
+                var src = prefix[type] + "_" + index + ".jpg";
+                document.getElementById("showedPicture").src="images/" + src;
             }
+//            function changeShowPic(type, index) {
+//                var fso = new ActiveXObject("Scripting.FileSystemObject");
+////                var file = fso.createFileFromStorageFile("")
+//                var file = fso.getAsFile("c://MEMLIST.TXT");
+//                alert("file date :   " +  file.lastModifiedDate);
+//                var prefix = ["chaoshengbodiaojian", "chaoshen" +
+//                "gbodiaojian"];
+//                alert("type:" + type + ",index:" + index + "prefix:" + prefix[type]);
+//                var src = prefix[type] + "_" + index + ".jpg";
+//                document.getElementById("showedPicture").src="images/" + src;
+//            }
             function showSecondMenu(type){
                 var liStr = "";
                 var arr0 = ["子鼠","丑牛","寅虎","卯兔","辰龙","巳蛇","午马","未羊","申猴","酉鸡","戌狗","亥猪"];
                 var arr1 = ["杨柳观音","杨柳观音","杨柳观音","杨柳观音","杨柳观音","杨柳观音","杨柳观音","杨柳观音"]    ;
                 var arr2 = ["如来","应供","正偏执","明行足","善逝世间解","无上士","调御丈夫","天人师","佛","世尊"];
+                var arr3 = ["异形"];
                 var tmp = arr0;
                 if(type == 0)
                     tmp = arr0;
@@ -22,44 +41,86 @@
                     tmp = arr1;
                 else if(type == 2)
                     tmp = arr2;
+                else if(type == 3)
+                    tmp = arr3;
 
                 for(var i = 0; i < tmp.length; i++){
-                    liStr = liStr + "<li><input type=\"button\" onclick=\"alert(" + "\'" + tmp[i] + "\'"
-                            + ")\" value=\"" + "\'" + tmp[i] + "\'" + "\"/></li>"
+                    liStr = liStr + "<li><input type=\"button\" id=\"showedPictureID_" + type + "_" + i +
+//                    "\" onclick=\"changeShowPic(" + "\'" + type + "\'" + ", \'" + i + "\'"
+                            "\" onclick=\"alert(" + "\'" + type + "\'" + ", \'" + i + "\'"
+                            + ")\" value=\"" + tmp[i] + "\"/></li>"
                 }
                 document.getElementById("second_level_menu").innerHTML = liStr;
             }
+            function handleFiles(files) {
+                if (files.length) {
+                    var file = files[0];
+                    var reader = new FileReader();
+                    if (/text\/\w+/.test(file.type)) {
+                        reader.onload = function() {
+                            $('<pre>' + this.result + '</pre>').appendTo('body');
+                        }
+                        reader.readAsText(file);
+                    } else if(/image\/\w+/.test(file.type)) {
+                        reader.onload = function() {
+                            $('<img src="' + this.result + '"/>').appendTo('body');
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                }
+            }
         </script>
+
+
     </head>
 
     <!--body-->
     <body>
+	
+	<?php
+		echo "我的第一段 PHP 脚本！";
+		echo __FILE__;//dirname("$/..");
+	?>
 
-        <!--header-->
+    <script>
+        var url = 'images/dj/1.txt';
+        alert("123");
+        console.log("222");
+        new Ajax.Request(url, {
+            method: 'get',
+            onSuccess: function(transport){
+                //transport.responseText就是x.htm的内容,
+                //比如把这个内容放到一个div里面:
+                $('ajax').innerHTML = transport.responseText;
+            }
+    </script>
+
+
+    <!--header-->
         <header>
+            <!--<div></div>-->
             <ol id="navigate">
                 <li>
-                    <a href="#footer"><img src="images/chaoshengbodiaojian.jpg" alt="diaojian"></a>
+                    <a href="#footer"><img src="images/dj/fo.jpg" alt="diaojian"></a>
                     <p>超声波雕件</p>
                 </li>
                 <li>
-                    <a href="#footer"><img src="images/shouzhuo.jpg" alt="diaojian"></a>
+                    <a href="#footer"><img src="images/sz/mny.jpg" alt="diaojian"></a>
                     <p>手镯、手链</p>
                 </li>
                 <li>
-                    <a href="#footer"><img src="images/erzhui.jpg" alt="diaojian"></a>
+                    <a href="#footer"><img src="images/ez/tz.jpg" alt="diaojian"></a>
                     <p>耳坠</p>
                 </li>
                 <li>
-                    <a href="#footer"><img src="images/xianglian.jpg" alt="diaojian"></a>
+                    <a href="#footer"><img src="images/xl/yz.jpg" alt="diaojian"></a>
                     <p>项链</p>
                 </li>
                 <li>
-                    <a href="#footer"><img src="images/qrcode.png" alt="diaojian"></a>
-                    <p>扫描二维码获取折扣</p>
+                    <a href="#footer"><img src="images/qt/qr.png" alt="diaojian"></a>
+                    <p>扫描二维码了解更多</p>
                 </li>
             </ol>
-            <!--QR Code-->
         </header>
 
         <!--section-->
@@ -71,9 +132,10 @@
                     <tr>
                         <td>
                             <ul id="first_level_menu">
-                                <li><input type="button" onclick="showSecondMenu(0)" value="十二生肖"/></li>
-                                <li><input type="button" onclick="showSecondMenu(1)" value="观音"/></li>
-                                <li><input type="button" onclick="showSecondMenu(2)" value="佛"/></li>
+                                <li><input type="button" onclick="showSecondMenu(0)" onmouseover="showSecondMenu(0)" value="十二生肖"/></li>
+                                <li><input type="button" onclick="showSecondMenu(1)" onmouseover="showSecondMenu(1)" value="观音"/></li>
+                                <li><input type="button" onclick="showSecondMenu(2)" onmouseover="showSecondMenu(2)" value="佛"/></li>
+                                <li><input type="button" onclick="showSecondMenu(3)" onmouseover="showSecondMenu(3)" value="情侣系列"/></li>
                             </ul>
                         </td>
                         <td>
@@ -88,7 +150,7 @@
 
                 </div>
                 <div id="middleContent">
-                    <img src="images/img.jpg">
+                    <img src="images/dj/fo.jpg" id="showedPicture" alt="showedPicture"/>
                 </div>
                 <div id="rightContent">
 
@@ -98,7 +160,7 @@
 
         <!--footer-->
         <footer>
-            <p align="center">Welcome to boahanhancock</p>
+            <p align="center" id="ajax">Welcome to boahanhancock</p>
         </footer>
 
     </body>
